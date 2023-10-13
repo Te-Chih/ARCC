@@ -1,0 +1,115 @@
+# Data
+dataset: 'WhoISWho-50'
+aminerData_path: 'and/data/whoiswho/raw_data/'
+aminerDataProcess_path: 'and/data/whoiswho/data_process/'
+aminerEmbedding_path: 'and/data/whoiswho/embedding/'
+# semantic emb
+all_semantic_emb_nb50: 'bert_cls_embedding_epoch50_P_TKB.json'
+#all_semantic_emb_we: 'wiw_SemanticEmbedding_100.json'
+#we_model: 'model_paper_100.model'
+#we_model_TKVA: 'model_paper_100_TKVA.model'
+# rule relation emb
+train_rel_emb_rule: 'allPaperRelationEmbedings_all_100_train_thr80.json'
+test_rel_emb_rule: 'allPaperRelationEmbedings_all_100_test_thr80.json'
+valid_rel_emb_rule: 'allPaperRelationEmbedings_all_100_valid_thr80.json'
+#3co relation emb
+train_rel_emb_3co: 'RelationEmb_train_3Co_100.json'
+valid_rel_emb_3co: 'RelationEmb_valid_3Co_100.json'
+test_rel_emb_3co: 'RelationEmb_test_3Co_100.json'
+
+#rule relation embedding layer data
+all_pid_rule: "wiw_all_pid_rule.json"
+all_pid_to_idx_rule: "wiw_all_pid_to_idx_rule.json"
+all_rel_emb_vector_rule: "wiw_all_rel_emb_vector_rule.json"
+all_wv_sem_emb_vector_rule: "wiw_all_wv_sem_emb_vector_rule.json"
+all_b50_sem_emb_vector_rule: "wiw_all_b50_sem_emb_vector_rule.json"
+
+#3co relation embedding layer data
+all_pid_3co: "wiw_all_pid_3co.json"
+all_pid_to_idx_3co: "wiw_all_pid_to_idx_3co.json"
+all_rel_emb_vector_3co: "wiw_all_rel_emb_vector_3co.json"
+all_wv_sem_emb_vector_3co: "wiw_all_wv_sem_emb_vector_3co.json"
+all_b50_sem_emb_vector_3co: "wiw_all_b50_sem_emb_vector_3co.json"
+
+
+
+# tuple dataset
+train_tuple: 'tuple_train_data_220.json'
+valid_tuple: 'tuple_eval_data_50.json'
+#test_tuple: 'tuple_eval_data_50.json'
+
+# adj
+#rule adj
+train_adj_rule: 'nomax_train_adj_matrix_thr80.json'
+test_adj_rule: 'nomax_test_adj_matrix_thr80.json'
+valid_adj_rule: 'nomax_valid_adj_matrix_thr80.json'
+# 3co adj
+train_adj_3co: 'train_3Co_matrix.json'
+test_adj_3co: 'test_3Co_matrix.json'
+valid_adj_3co: 'valid_3Co_matrix.json'
+
+# df uo
+train_df: 'train_paper_label.csv'
+valid_df: 'eval_paper_label.csv'
+test_df: 'test_paper_label.csv'
+all_pid2name: 'all_pid2name.json'
+
+
+# process data temp file
+#wordIdf: 'wordIdf.json'
+#semantic_corpus: 'semantic_corpus.json'
+#
+#wordIdf_TKVA: 'wordIdf_TKVA.json'
+#semantic_corpus_TKVA: 'semantic_corpus_TKVA.json'
+#paper_feature_TKVA: 'allPapersFeatures_TKVA.json'
+#
+
+#bert_model_tkv: 'bert_model_epoch50_TKV'
+#bert_courpus_tkv: 'bert_corpus_TKV.json'
+#bert_train_courpus_tkv: 'bert_train_courpus_TKV.txt'
+#bert_eval_courpus_tkv: 'bert_eval_courpus_TKV.txt'
+#cls_semantic_embedding_bert_tkv: 'bert_cls_embedding_epoch50_TKV.json'
+#avg_semantic_embedding_bert_tkv: 'bert_hidden_embedding_epoch50_TKV.json'
+
+#bert_model_ptkva: 'bert_model_epoch50_PTKVA'
+#bert_courpus_ptkva: 'bert_corpus_PTKVA.json'
+#bert_train_courpus_ptkva: 'bert_train_courpus_PTKVA.txt'
+#bert_eval_courpus_ptkva: 'bert_eval_courpus_PTKVA.txt'
+#cls_semantic_embedding_bert_ptkva: 'bert_cls_embedding_epoch50_PTKVA.json'
+#avg_semantic_embedding_bert_ptkva: 'bert_hidden_embedding_epoch50_PTKVA.json'
+#
+
+
+# raw data
+all_raw_pub_data: 'pubs_raw.json'
+#test_raw_pub_data: 'new_test_pub.json'
+#train_raw_pub_data: 'new_train_pub.json'
+#valid_raw_pub_data: 'new_valid_pub.json'
+#trainAndValid_raw_data: 'test_pub_raw_.json'
+
+# label data
+test_author_data: 'test_author.json'
+train_author_data: 'train_author.json'
+valid_author_data: 'valid_author.json'
+
+
+
+# Output
+save_path: 'and/WhoIsWho_TrainModel'
+
+#wandb setting
+wandb_project_name: 'AND_WIW50_SCL_EML'
+#wandb_run_name
+
+# training
+acc_sim: 0.5
+MAX_NUM: 2000
+#rel_freeze: True
+#sem_freeze: True
+
+
+#network
+#network: 'SB_RN2V_CatMLP'
+#build_graph: 'no'
+#refine_graph: '3RULE'
+loss: 'ON_SCL'

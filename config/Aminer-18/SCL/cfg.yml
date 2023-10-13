@@ -1,0 +1,89 @@
+# Data
+dataset: 'AMINER-18'
+aminerData_path: 'and/data/Aminer/aminerData/'
+aminerDataProcess_path: and/data/Aminer//aminerDataProcess/'
+aminerEmbedding_path: 'and/data/Aminer/aminerEmbeding/'
+# semantic emb
+all_semantic_emb_nb50: 'bert_mask_50_embeding_new.json'
+all_semantic_emb_we: 'allPapersEmbeding_0_100.json'
+# rule relation emb
+train_rel_emb_rule: 'allPaperRelationEmbedings_train_0_100.json'
+test_rel_emb_rule: 'allPaperRelationEmbedings_test_0_100.json'
+# 3co relation emb
+train_rel_emb_3co: 'RelationEmb_train_3Co_100.json'
+test_rel_emb_3co: 'RelationEmb_test_3Co_100.json'
+
+#rule relation embedding layer data
+all_pid_rule: "all_pid_rule.json"
+all_pid_to_idx_rule: "all_pid_to_idx_rule.json"
+all_rel_emb_vector_rule: "all_rel_emb_vector_rule.json"
+all_sem_emb_vector_rule: "all_sem_emb_vector_rule.json"
+
+#3c0 relation embedding layer data
+all_pid_3co: "all_pid_3co.json"
+all_pid_to_idx_3co: "all_pid_to_idx_3co.json"
+all_rel_emb_vector_3co: "all_rel_emb_vector_3co.json"
+all_sem_emb_vector_3co: "all_sem_emb_vector_3co.json"
+
+# tuple dataset
+#train_tuple: 'tuple_train_data_400.json'
+#valid_tuple: 'tuple_eval_data_100.json'
+
+# adj
+#rule adj
+train_adj_rule: 'split_nomax_trainAndeval_adj_matrix.json'
+test_adj_rule: 'nomax_test_adj_matrix.json'
+# 3co adj
+train_adj_3co: 'train_3Co_matrix.json'
+test_adj_3co: 'test_3Co_matrix.json'
+
+# df
+train_df: 'train_paper_label_400.csv'
+valid_df: 'eval_paper_label_100.csv'
+test_df: 'test_paper_label.csv'
+all_pid2name: 'all_pid2name.json'
+
+
+
+# raw data
+raw_data: 'pubs_raw.json'
+test_raw_data: 'name_to_pubs_test_100.json'
+
+
+# Output
+save_path: 'and/trained_model_SCL_Aminer18'
+
+#wandb setting
+#up
+wandb_project_name: 'ABL_AND_AMINER_SCL_EMBLayer'
+#wandb_project_name: 'AND_AMINER_SCL_BCE_EMBLayer'
+#wandb_run_name
+
+# training
+acc_sim: 0.5
+hidden: 100
+dropout: 0.5
+temperature_content: 0.07
+temperature_structure: 0.07
+temperature_fusion: 0.07
+lossfac_content: 1.0
+lossfac_fusion: 1.0
+learning_rate: 0.0001
+low_sim_threshold: 0.45
+high_sim_threshold: 0.96
+metric_type: 'cosine'
+seed: 2021
+rel_freeze: 0
+sem_freeze: 1.0
+sem_freeze: 1.0
+
+#rel_freeze: True
+#sem_freeze: True
+
+
+#network
+#network: 'SB_RN2V_CatMLP'
+#build_graph: 'no'
+#refine_graph: '3RULE'
+loss: 'ON_SCL'
+#loss: 'ON_SCL_BCE
