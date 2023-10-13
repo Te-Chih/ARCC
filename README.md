@@ -1,1 +1,1 @@
-1.run run.bash
+1.run bash/run.bash
